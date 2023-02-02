@@ -1,0 +1,17 @@
+.page-not-found {
+  border-top: 60px solid $color-blue-white;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 $space-medium;
+  color: $color-red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $space-big;
+
+  span {
+    font-size: $paragraph-desktop-big;
+    line-height: 200%;
+  }
+}

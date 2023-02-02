@@ -1,0 +1,24 @@
+#package-list {
+  min-height: 100vh;
+  border-top: 60px solid $color-blue-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-medium;
+
+  @media (min-width: 1000px) {
+    width: 960px;
+    margin: 0 auto;
+    border-left: solid $color-red 2px;
+    border-right: solid $color-red 2px;
+  }
+
+  h1 {
+    width: 350px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: $color-yellow;
+    border-radius: 30px;
+  }
+}

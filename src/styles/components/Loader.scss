@@ -1,0 +1,32 @@
+.loader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $color-grey;
+  text-align: center;
+  gap: $space-big;
+
+  span,
+  p {
+    font-size: $paragraph-mobile-big;
+    line-height: 200%;
+  }
+
+  @media (min-width: 750px) {
+    span,
+    p {
+      font-size: $paragraph-tablet-big;
+      line-height: 200%;
+    }
+  }
+  @media (min-width: 1000px) {
+    span,
+    p {
+      font-size: $paragraph-desktop-big;
+      line-height: 200%;
+    }
+  }
+}

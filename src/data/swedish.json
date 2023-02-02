@@ -1,0 +1,16 @@
+{
+  "navlinkaboutus": "OM OSS",
+  "faq": "FAQ",
+  "labelMobileNumber": "Registrerat Mobilnummer",
+  "yourOrders": "Dina Beställningar",
+  "packageID": "Paket ID",
+  "status": "Status",
+  "example": "Exempel",
+  "loadingOne": "Vi laddar dina paket",
+  "loadingTwo": "Kan du vänta??",
+  "emptyOne": "Tyvärr, vi kunde inte hitta några paket bokade med detta nummer.",
+  "emptyTwo": "Se till att du har angett rätt nummer.",
+  "weather": " Dåligt väder...Paket kunde inte nås.",
+  "tryAgain": "Vänligen försök igen senare.",
+  "notFound": "SIDAN HITTAS INTE"
+}

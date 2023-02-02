@@ -1,0 +1,24 @@
+.package-list-item {
+  height: 50px;
+  width: 325px;
+  padding: 0 $space-medium;
+  background-color: $color-red;
+  border-radius: 30px;
+  font-size: $paragraph-mobile;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  span {
+    font-size: $paragraph-mobile-big;
+    display: inline-block;
+    margin-right: auto;
+  }
+
+  .icon {
+    font-size: 20px;
+    color: rgba(43, 43, 43, 0.405);
+    position: relative;
+  }
+}

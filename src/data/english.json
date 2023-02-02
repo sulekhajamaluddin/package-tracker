@@ -1,0 +1,16 @@
+{
+  "navlinkaboutus": "ABOUT US",
+  "faq": "FAQ",
+  "labelMobileNumber": "Registered Mobile Number",
+  "yourOrders": "Your Orders",
+  "packageID": "Package ID",
+  "status": "Status",
+  "example": "Example",
+  "loadingOne": "We are loading your packages",
+  "loadingTwo": "Please wait",
+  "emptyOne": " Sorry, we could not find any packages booked with this number.",
+  "emptyTwo": " Please make sure you entered the correct number.",
+  "weather": " Bad weather...Packages could not be reached.",
+  "tryAgain": "Please try again later.",
+  "notFound": "PAGE NOT FOUND"
+}

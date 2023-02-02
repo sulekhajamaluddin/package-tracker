@@ -1,0 +1,19 @@
+// Base
+@import "./base/variables";
+@import "./base/layout";
+@import "./base/typography";
+
+//Pages
+@import "./pages/Home.scss";
+@import "./pages/PackageListPage.scss";
+@import "./pages/PackageItem.scss";
+@import "./pages/Error.scss";
+@import "./pages//PageNotFound.scss";
+@import "./pages/EmptyList.scss";
+
+//Components
+@import "./components/Loader.scss";
+@import "./components/NavBar.scss";
+@import "./components/LanguageSelection.scss";
+@import "./components/PackageListItem.scss";
+@import "./components/LocationMap.scss";
