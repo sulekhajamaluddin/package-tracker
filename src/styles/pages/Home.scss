@@ -25,22 +25,22 @@
     width: 100%;
     max-width: 750px;
     border-top: 60px $color-blue-white solid;
-    background: url("../../../public/assets/background-mobile.jpg");
+    background: url("../../../public/assets/cloud.jpg");
     background-size: cover;
-    background-position: 10%;
+    background-position: left;
 
     @media (min-width: 550px) {
       height: 65vh;
-      background: url("../../../public/assets/background-tablet-2.jpg");
+      background: url("../../../public/assets/cloud.jpg");
       background-size: cover;
-      background-position: center;
+      background-position: right;
     }
 
     @media (min-width: 1000px) {
       border-top: none;
-      background: url("../../../public/assets/background-desktop.jpg");
+      background: url("../../../public/assets/cloud.jpg");
       background-size: cover;
-      background-position: right;
+      background-position: 10%;
       height: 100vh;
       max-width: 60vw;
     }
@@ -92,6 +92,11 @@
         word-wrap: break-word;
         color: $color-grey;
         -webkit-text-stroke: rgb(237, 236, 236) 3px;
+
+        @media (max-height: 850px) {
+          font-size: 105px;
+          width: 105px;
+        }
       }
 
       .tracker {

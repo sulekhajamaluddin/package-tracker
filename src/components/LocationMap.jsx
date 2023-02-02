@@ -15,8 +15,8 @@ export default function LocationMap({ latitude, longitude }) {
   };
 
   const containerStyle = {
-    width: "400px",
-    height: "400px",
+    width: "375px",
+    height: "375px",
   };
 
   return (

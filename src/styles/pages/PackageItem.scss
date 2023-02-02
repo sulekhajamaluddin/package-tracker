@@ -3,18 +3,48 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: $space-medium;
+  background-color: $color-wheat;
+  padding: 0 $space-medium;
+
+  @media (min-width: 1000px) {
+    width: 750px;
+    margin: 0 auto;
+    border-left: 3px $color-red solid;
+    border-right: 3px $color-red solid;
+    background-color: $color-white-pale;
+  }
 }
 
 .package-item {
   img {
-    height: 300px;
+    height: 250px;
+  }
+
+  .package-id {
+    font-size: $paragraph-mobile-big;
+  }
+
+  .info {
+    background-color: $color-white-pale;
+
+    span {
+      display: block;
+      padding: $space-medium;
+    }
+  }
+
+  p {
+    line-height: 200%;
+    text-align: center;
   }
 
   h1 {
     width: 350px;
     height: 60px;
-    padding: 0px $space-small;
     line-height: 60px;
+    border-radius: 30px;
+    padding: 0px $space-small;
     text-align: center;
     background-color: $color-yellow;
     text-transform: capitalize;
