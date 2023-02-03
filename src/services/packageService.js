@@ -1,6 +1,5 @@
 export async function getPackages() {
   try {
-    //const url = process.env.REACT_APP_DATA_API;
     const url = "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840";
     const response = await fetch(url);
     if (!response.ok) {
