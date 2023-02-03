@@ -23,5 +23,12 @@
   "messageComing": "The package is expected to reach on",
   "hours": "hours",
   "messagePickUp": "The package is ready for pick up. Please make sure to collect the package within 7 days.",
-  "messageDelivered": "The package has been delivered on"
+  "messageDelivered": "The package has been delivered on",
+  "aboutTitle": "We are the Insta Tracker",
+  "paraOne": "InstaTracker is an order tracking service for the customers of InstaPacket.",
+  "paraTwo": "InstaPacket delivers what you ordered online to you. Since 2010, when it was first established, InstaPacket has been delivering smiles to houses located far and wide in Sweden.",
+  "paraThree": "In a constantly evolving world, the company is dedicated to refining itself into a climate responsible solution to the logistics needs of the society. Thus we are moving more and more towards Insta Parcels, where we bring the packages to your nearest parcel locker and you collect it from there, thus saving the last mile energy and lots of fossil fuel. We are also trying to achieve fossil free delivery zones as part of our nature care.",
+  "paraFour": "Don’ t worry !! We also deliver to your door step.",
+  "paraFive": "With an ever growing network, the reach of this logistics group has spread every mile, reaching all the major cities and small town areas. We are on a constant journey to become more and more earth friendly.",
+  "paraSix": "Let's preserve the smiles for the future houses too..."
 }

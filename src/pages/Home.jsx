@@ -39,7 +39,7 @@ export default function Home() {
             <input
               type={"text"}
               placeholder={`${placeHolder}`}
-              onChange={(e) => setPhoneNumber(e.target.value)}
+              onChange={(e) => setPhoneNumber(e.target.value.trim())}
             />
             <button type="submit" onClick={(e) => handleSubmit(e)}>
               <FontAwesomeIcon
