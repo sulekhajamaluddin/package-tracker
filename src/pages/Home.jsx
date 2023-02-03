@@ -19,7 +19,6 @@ export default function Home() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(e);
     const errors = getErrors(phoneNumber);
     const isValid = Object.keys(errors).length === 0;
     if (isValid) {
@@ -32,8 +31,8 @@ export default function Home() {
 
   return (
     <div id="home">
-      <div className="hero"></div>
-      <div className="container">
+      <section className="hero">{/*Empty on purpose*/}</section>
+      <section className="container">
         <form className="input-container">
           <label htmlFor="phoneNumber">{labelMobileNumber}</label>
           <div>
@@ -54,7 +53,7 @@ export default function Home() {
         </form>
         <h1>INSTA</h1>
         <span className="tracker">TRACKER</span>
-      </div>
+      </section>
     </div>
   );
 }

@@ -9,8 +9,8 @@ import { useContent } from "../state/ContentContext";
 
 export default function NavBar() {
   const { content } = useContent();
-
   const { navlinkaboutus } = content;
+
   return (
     <nav className="navbar">
       <Link to="/" className="logo">
@@ -18,7 +18,6 @@ export default function NavBar() {
       </Link>
       <div>
         <Link to="/about">{navlinkaboutus}</Link>
-        {/* <Link to="/">{faq}</Link> */}
         <LanguageSelection />
       </div>
     </nav>

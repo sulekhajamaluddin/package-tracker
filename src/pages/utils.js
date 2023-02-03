@@ -30,26 +30,21 @@ export function getInfoObj(selectedPackage, content) {
 }
 
 export function getState(selectedPackage) {
-  console.log(selectedPackage.status);
   let status = "";
   if (selectedPackage.status === "ready-for-pickup") {
     status = "ready";
-    console.log("inside ready for pickup");
   } else if (
     selectedPackage.status === "on-the-way" ||
     selectedPackage.status === "order-info-received"
   ) {
     status = "coming";
-    console.log("inside on the way");
   } else if (selectedPackage.status === "delivered") {
     status = "delivered";
-    console.log("Inside delivered");
   }
   return status;
 }
 
 export function getMessage(currentState, selectedPackage, content) {
-  console.log(currentState);
   const formattedDate = getDate(selectedPackage);
   const formattedTime = getTime(selectedPackage, content);
   if (currentState === "coming") {

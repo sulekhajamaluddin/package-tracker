@@ -38,6 +38,7 @@ export default function PackageListPage() {
       packages={packages}
     />
   ));
+
   if (packagesList.length === 0) return <EmptyList />;
 
   return (

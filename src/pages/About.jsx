@@ -1,8 +1,9 @@
 //Project Files
 import house from "../assets/images/house.png";
+
 export default function About() {
   return (
-    <div id="about">
+    <main id="about">
       <img src={house} alt="A house"></img>
       <h1>We are the Insta Tracker</h1>
       <p>
@@ -30,6 +31,6 @@ export default function About() {
         We are on a constant journey to become more and more earth friendly.
       </p>
       <p>Let's preserve the smiles for the future houses too...</p>
-    </div>
+    </main>
   );
 }
