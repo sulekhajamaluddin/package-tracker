@@ -6,6 +6,7 @@
   align-items: center;
   gap: $space-medium;
   background-color: $color-wheat;
+  padding-bottom: $space-medium;
 
   @media (min-width: 1000px) {
     width: 750px;
