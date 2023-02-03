@@ -12,5 +12,10 @@
   "emptyTwo": "Se till att du har angett rätt nummer.",
   "weather": " Dåligt väder...Paket kunde inte nås.",
   "tryAgain": "Vänligen försök igen senare.",
-  "notFound": "SIDAN HITTAS INTE"
+  "notFound": "SIDAN HITTAS INTE",
+  "user": "Användare",
+  "sender": "Avsändare",
+  "location": "Plats",
+  "notes": "Anteckningar",
+  "verification": "Verifikation krävs"
 }

@@ -16,10 +16,8 @@ export function getTime(selectedPackage) {
   return timeString;
 }
 
-export function createPackageObject(selectedPackage) {
+export function getInfoObj(selectedPackage) {
   const packageObject = {
-    packageID: selectedPackage.parcel_id,
-    status: selectedPackage.status,
     user: selectedPackage.user_name,
     sender: selectedPackage.sender,
     location: selectedPackage.location_name,
@@ -29,7 +27,7 @@ export function createPackageObject(selectedPackage) {
   return packageObject;
 }
 
-export function getStatusState(selectedPackage) {
+export function getState(selectedPackage) {
   console.log(selectedPackage.status);
   let status = "";
   if (selectedPackage.status === "ready-for-pickup") status = "ready";
@@ -37,4 +35,13 @@ export function getStatusState(selectedPackage) {
     status = "coming";
   else if (selectedPackage.status === "delivered") status = "delivered";
   return status;
+}
+
+export function getMessage(currentState, formattedDate, formattedTime) {
+  if (currentState === "coming")
+    return `The package is expected to reach on ${formattedDate} ${formattedTime} hours`;
+  else if (currentState === "ready")
+    return `The package is ready for pick up. Please make sure to collect the package within 7 days.`;
+  else if (currentState === "delivered")
+    return `The package has been delivered on ${formattedDate}`;
 }

@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: $space-medium;
+  gap: $space-big;
   background-color: $color-wheat;
   padding: 0 $space-medium;
 
@@ -27,20 +27,31 @@
 
   .info {
     background-color: $color-white-pale;
+    width: 100%;
+    max-width: 375px;
+
+    @media (min-width: 1000px) {
+      background-color: $color-yellow;
+    }
 
     span {
       display: block;
       padding: $space-medium;
+      text-align: left;
     }
   }
 
   p {
+    font-size: $paragraph-mobile-big;
+    width: 100%;
+    max-width: 375px;
     line-height: 200%;
     text-align: center;
+    margin-bottom: 0px;
   }
 
   h1 {
-    width: 350px;
+    width: 375px;
     height: 60px;
     line-height: 60px;
     border-radius: 30px;

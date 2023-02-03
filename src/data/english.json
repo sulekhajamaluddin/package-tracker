@@ -12,5 +12,10 @@
   "emptyTwo": " Please make sure you entered the correct number.",
   "weather": " Bad weather...Packages could not be reached.",
   "tryAgain": "Please try again later.",
-  "notFound": "PAGE NOT FOUND"
+  "notFound": "PAGE NOT FOUND",
+  "user": "User",
+  "sender": "Sender",
+  "location": "Location",
+  "notes": "Notes",
+  "verification": "Verification Required"
 }
