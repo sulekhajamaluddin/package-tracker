@@ -27,11 +27,11 @@ export default function PackageListPage() {
   if (loading) return <Loader />;
   if (error) return <Error />;
 
-  const packagesList = packages.filter(
+  const packagesList = packages?.filter(
     (item) => item.user_phone === phoneNumber
   );
 
-  const packageItem = packagesList.map((item) => (
+  const packageItem = packagesList?.map((item) => (
     <PackageListItem
       key={item.id}
       packageId={item.parcel_id}

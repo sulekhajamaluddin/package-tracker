@@ -5,7 +5,7 @@
   align-items: center;
   gap: $space-big;
   background-color: $color-wheat;
-  padding: 0 $space-medium;
+  padding: $space-medium $space-medium;
 
   @media (min-width: 1000px) {
     width: 750px;
@@ -18,7 +18,7 @@
 
 .package-item {
   img {
-    height: 250px;
+    height: 350px;
   }
 
   .package-id {
@@ -51,7 +51,7 @@
   }
 
   h1 {
-    width: 375px;
+    width: 370px;
     height: 60px;
     line-height: 60px;
     border-radius: 30px;

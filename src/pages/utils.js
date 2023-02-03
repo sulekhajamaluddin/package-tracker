@@ -7,22 +7,24 @@ export function getDate(selectedPackage) {
   return formattedDate;
 }
 
-export function getTime(selectedPackage) {
+export function getTime(selectedPackage, content) {
   const estimatedTime = selectedPackage.eta.slice(11, 13);
   const estimatedTimeInHours = +estimatedTime;
-  const timeString = `between ${estimatedTimeInHours - 1}:00 and ${
+  const timeString = `${content.between} ${estimatedTimeInHours - 1}:00 and ${
     estimatedTimeInHours + 1
   }:00`;
   return timeString;
 }
 
-export function getInfoObj(selectedPackage) {
+export function getInfoObj(selectedPackage, content) {
+  const { user, sender, location, notes, verification } = content;
   const packageObject = {
-    user: selectedPackage.user_name,
-    sender: selectedPackage.sender,
-    location: selectedPackage.location_name,
-    notes: selectedPackage.notes,
-    verification: selectedPackage.verification_required === true ? "Yes" : "No",
+    [user]: selectedPackage.user_name,
+    [sender]: selectedPackage.sender,
+    [location]: selectedPackage.location_name,
+    [notes]: selectedPackage.notes,
+    [verification]:
+      selectedPackage.verification_required === true ? "Yes" : "No",
   };
   return packageObject;
 }
@@ -30,18 +32,54 @@ export function getInfoObj(selectedPackage) {
 export function getState(selectedPackage) {
   console.log(selectedPackage.status);
   let status = "";
-  if (selectedPackage.status === "ready-for-pickup") status = "ready";
-  else if (selectedPackage.status === "on-the-way" || "order-info-received")
+  if (selectedPackage.status === "ready-for-pickup") {
+    status = "ready";
+    console.log("inside ready for pickup");
+  } else if (
+    selectedPackage.status === "on-the-way" ||
+    selectedPackage.status === "order-info-received"
+  ) {
     status = "coming";
-  else if (selectedPackage.status === "delivered") status = "delivered";
+    console.log("inside on the way");
+  } else if (selectedPackage.status === "delivered") {
+    status = "delivered";
+    console.log("Inside delivered");
+  }
   return status;
 }
 
-export function getMessage(currentState, formattedDate, formattedTime) {
-  if (currentState === "coming")
-    return `The package is expected to reach on ${formattedDate} ${formattedTime} hours`;
-  else if (currentState === "ready")
-    return `The package is ready for pick up. Please make sure to collect the package within 7 days.`;
-  else if (currentState === "delivered")
-    return `The package has been delivered on ${formattedDate}`;
+export function getMessage(currentState, selectedPackage, content) {
+  console.log(currentState);
+  const formattedDate = getDate(selectedPackage);
+  const formattedTime = getTime(selectedPackage, content);
+  if (currentState === "coming") {
+    return `${content.messageComing} ${formattedDate} ${formattedTime} ${content.hours}`;
+  } else if (currentState === "ready") {
+    return `${content.messagePickUp}`;
+  } else if (currentState === "delivered") {
+    return `${content.messageDelivered} ${formattedDate}`;
+  }
+}
+
+export function getErrors(phoneNumber) {
+  const result = {};
+  const phonePattern = /\+\d{2}[ ]?\d{9}\b/;
+  if (!phoneNumber) result.phoneNumber = "*Mobile Number is required";
+  if (!phoneNumber.trim())
+    result.emptyPhoneNumber = "*Mobile number cannot be empty string";
+  if (phoneNumber && !phonePattern.test(phoneNumber))
+    result.name = "Please enter a valid mobile number";
+  return result;
+}
+
+export function setMessages(errors) {
+  return (
+    <div className="alert">
+      <ul>
+        {Object.keys(errors).map((key) => {
+          return <li key={key}>{errors[key]}</li>;
+        })}
+      </ul>
+    </div>
+  );
 }

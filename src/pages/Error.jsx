@@ -1,5 +1,5 @@
 //Project Files
-import error from "../assets/images/sad.png";
+import error from "../assets/images/sun.png";
 import { useContent } from "../state/ContentContext";
 
 export default function Error() {

@@ -23,7 +23,7 @@ export function loadPackages(setError, setLoading, setPackages) {
     } finally {
       setTimeout(() => {
         setLoading(false);
-      }, 1000);
+      }, 500);
     }
   }
   init();

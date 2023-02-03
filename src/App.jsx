@@ -5,8 +5,14 @@ import { Routes, Route } from "react-router-dom";
 import "./styles/styles.scss";
 import { ContentProvider } from "./state/ContentContext";
 import { PackagesProvider } from "./state/PackagesContext";
-import { NavBar } from "./components";
-import { Home, PackageListPage, PackageItem, PageNotFound } from "./pages";
+import { NavBar, Footer } from "./components";
+import {
+  Home,
+  About,
+  PackageListPage,
+  PackageItem,
+  PageNotFound,
+} from "./pages";
 
 function App() {
   return (
@@ -15,10 +21,12 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/packages/:parameter" element={<PackageListPage />} />
           <Route path="/packages/:parameter/:id" element={<PackageItem />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
+        <Footer />
       </PackagesProvider>
     </ContentProvider>
   );

@@ -2,6 +2,7 @@
   "navlinkaboutus": "ABOUT US",
   "faq": "FAQ",
   "labelMobileNumber": "Registered Mobile Number",
+  "placeHolder": "Please enter your mobile number",
   "yourOrders": "Your Orders",
   "packageID": "Package ID",
   "status": "Status",
@@ -17,5 +18,10 @@
   "sender": "Sender",
   "location": "Location",
   "notes": "Notes",
-  "verification": "Verification Required"
+  "verification": "Verification Required",
+  "between": "between",
+  "messageComing": "The package is expected to reach on",
+  "hours": "hours",
+  "messagePickUp": "The package is ready for pick up. Please make sure to collect the package within 7 days.",
+  "messageDelivered": "The package has been delivered on"
 }

@@ -10,15 +10,15 @@ import { useContent } from "../state/ContentContext";
 export default function NavBar() {
   const { content } = useContent();
 
-  const { navlinkaboutus, faq } = content;
+  const { navlinkaboutus } = content;
   return (
     <nav className="navbar">
       <Link to="/" className="logo">
         <FontAwesomeIcon className="logo" icon={solid("location-dot")} />
       </Link>
       <div>
-        <Link to="/">{navlinkaboutus}</Link>
-        <Link to="/">{faq}</Link>
+        <Link to="/about">{navlinkaboutus}</Link>
+        {/* <Link to="/">{faq}</Link> */}
         <LanguageSelection />
       </div>
     </nav>

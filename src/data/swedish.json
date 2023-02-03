@@ -2,6 +2,7 @@
   "navlinkaboutus": "OM OSS",
   "faq": "FAQ",
   "labelMobileNumber": "Registrerat Mobilnummer",
+  "placeHolder": "Vänligen ange ditt mobilnummer",
   "yourOrders": "Dina Beställningar",
   "packageID": "Paket ID",
   "status": "Status",
@@ -17,5 +18,10 @@
   "sender": "Avsändare",
   "location": "Plats",
   "notes": "Anteckningar",
-  "verification": "Verifikation krävs"
+  "verification": "Verifikation krävs",
+  "between": "mellan",
+  "messageComing": "Paketet förväntas nå vidare",
+  "hours": "timmar",
+  "messagePickUp": "Paketet är klart för avhämtning. Se till att hämta paketet inom 7 dagar.",
+  "messageDelivered": "Paketet har levererats den"
 }

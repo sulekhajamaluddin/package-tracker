@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import truck from "../assets/images/truck.png";
 import { useContent, usePackages } from "../state";
 import LocationMap from "../components/LocationMap";
-import { getDate, getTime, getInfoObj, getState, getMessage } from "./utils";
+import { getInfoObj, getState, getMessage } from "./utils";
 
 export default function PackageItem() {
   const { id } = useParams();
@@ -14,12 +14,12 @@ export default function PackageItem() {
   const { packageID } = content;
 
   const selectedPackage = packages.filter((item) => item.parcel_id === id)[0];
+  console.log(selectedPackage);
   const { parcel_id, status } = selectedPackage;
-  const formattedDate = getDate(selectedPackage);
-  const formattedTime = getTime(selectedPackage);
   const currentState = getState(selectedPackage);
-  const message = getMessage(currentState, formattedDate, formattedTime);
-  const infoObject = getInfoObj(selectedPackage);
+  console.log(currentState);
+  const message = getMessage(currentState, selectedPackage, content);
+  const infoObject = getInfoObj(selectedPackage, content);
 
   const information = Object.keys(infoObject).map((key) => (
     <span key={key}>
