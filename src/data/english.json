@@ -7,6 +7,7 @@
   "packageID": "Package ID",
   "status": "Status",
   "example": "Example",
+  "condition": "Space required after country code.",
   "loadingOne": "We are loading your packages",
   "loadingTwo": "Please wait",
   "emptyOne": " Sorry, we could not find any packages booked with this number.",

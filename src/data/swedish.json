@@ -7,6 +7,7 @@
   "packageID": "Paket ID",
   "status": "Status",
   "example": "Exempel",
+  "condition": "Utrymme krävs efter landskod.",
   "loadingOne": "Vi laddar dina paket",
   "loadingTwo": "Kan du vänta??",
   "emptyOne": "Tyvärr, vi kunde inte hitta några paket bokade med detta nummer.",

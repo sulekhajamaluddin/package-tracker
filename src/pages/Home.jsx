@@ -12,7 +12,7 @@ export default function Home() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const navigate = useNavigate();
   const { content } = useContent();
-  const { labelMobileNumber, example, placeHolder } = content;
+  const { labelMobileNumber, example, placeHolder, condition } = content;
 
   const [errors, setErrors] = useState({});
   const [isValid, setisValid] = useState(true);
@@ -47,7 +47,9 @@ export default function Home() {
                 icon={solid("magnifying-glass")}
               />
             </button>
-            <span className="example">{example}: +46 729478015 </span>
+            <span className="example">
+              {example}: +46 729478015 - {condition}
+            </span>
             {!isValid && setMessages(errors)}
           </div>
         </form>
