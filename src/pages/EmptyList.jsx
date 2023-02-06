@@ -9,6 +9,8 @@ export default function EmptyList() {
   return (
     <div className="empty-list">
       <img src={emptyBox} alt="A few packages and one empty" />
+      {/* format -1 */}
+      {/* don't use br to separate a paraghaph, use another <p>  */}
       <p>
         {emptyOne} <br />
         {emptyTwo}
