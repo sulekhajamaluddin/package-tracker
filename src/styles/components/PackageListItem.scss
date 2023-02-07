@@ -1,5 +1,5 @@
 .package-list-item {
-  height: 50px;
+  height: 100px;
   width: 325px;
   padding: 0 $space-medium;
   background-color: $color-red;
@@ -8,17 +8,38 @@
   color: white;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 5px;
 
-  span {
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .big {
     font-size: $paragraph-mobile-big;
     display: inline-block;
     margin-right: auto;
   }
 
+  span {
+    text-transform: capitalize;
+    font-size: $paragraph-mobile;
+  }
+
+  .icon-holder {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $color-wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .icon {
     font-size: 20px;
-    color: white;
-    position: relative;
+    color: $color-red;
   }
 }

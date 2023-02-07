@@ -6,6 +6,113 @@
   align-items: center;
   background-color: $color-blue-white;
 
+  .hero {
+    height: 450px;
+    width: 100%;
+    max-width: 750px;
+    border-top: 60px $color-blue-white solid;
+    background: url("../../../public/assets/hero-mobile.jpg");
+    background-size: cover;
+    background-position: left;
+  }
+}
+
+#home {
+  .container {
+    flex: auto;
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: repeating-linear-gradient(
+      to right,
+      $color-red,
+      $color-red 0.75px,
+      $color-blue-white 0.75px,
+      $color-blue-white 70px
+    );
+
+    h1,
+    span {
+      display: none;
+    }
+  }
+}
+
+#home {
+  .input-container {
+    width: 90%;
+    max-width: 500px;
+    height: 200px;
+    border-radius: 30px;
+    padding: $space-medium;
+    background-color: $color-red;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .example {
+      display: inline-block;
+      max-width: 95%;
+      color: white;
+      font-size: 12px;
+      border-top: 10px transparent solid;
+    }
+
+    label {
+      font-size: 18px;
+      max-width: 95%;
+      margin-bottom: 12px;
+    }
+
+    .input {
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    input {
+      height: 50px;
+      width: 100%;
+      border-radius: 10px 30px 30px 10px;
+      border: rgba(98, 97, 97, 0.131) solid 2px;
+      padding: $space-small;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    .icon {
+      font-size: 25px;
+      color: rgba(43, 43, 43, 0.405);
+      position: absolute;
+      top: 11px;
+      right: 10px;
+    }
+
+    .alert {
+      font-size: $paragraph-mobile;
+      padding: $space-small $space-small;
+      text-align: center;
+      border-radius: 5px;
+      background-color: $color-wheat;
+      margin-top: $space-medium;
+      color: $color-red;
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+}
+
+#home {
   @media (min-width: 750px) {
     background: repeating-linear-gradient(
       to right,
@@ -21,14 +128,6 @@
   }
 
   .hero {
-    height: 450px;
-    width: 100%;
-    max-width: 750px;
-    border-top: 60px $color-blue-white solid;
-    background: url("../../../public/assets/hero-mobile.jpg");
-    background-size: cover;
-    background-position: left;
-
     @media (min-width: 550px) {
       height: 65vh;
       background-position: right;
@@ -54,26 +153,6 @@
 
 #home {
   .container {
-    flex: auto;
-    width: 100%;
-    max-width: 750px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: repeating-linear-gradient(
-      to right,
-      $color-red,
-      $color-red 0.75px,
-      $color-blue-white 0.75px,
-      $color-blue-white 70px
-    );
-
-    h1,
-    span {
-      display: none;
-    }
-
     @media (min-width: 750px) {
       background: transparent;
     }
@@ -83,6 +162,18 @@
       padding: $space-big;
       align-items: flex-start;
       gap: $space-medium;
+
+      .tracker {
+        display: block;
+        font-size: 135px;
+        letter-spacing: $space-big;
+        position: absolute;
+        right: 90px;
+        bottom: 40px;
+        color: $color-red;
+        -webkit-text-stroke: rgb(233, 230, 230) 3px;
+        margin-right: $space-big;
+      }
 
       h1 {
         position: absolute;
@@ -103,80 +194,15 @@
           width: 105px;
         }
       }
-
-      .tracker {
-        display: block;
-        font-size: 135px;
-        letter-spacing: $space-big;
-        position: absolute;
-        right: 90px;
-        bottom: 40px;
-        color: $color-red;
-        -webkit-text-stroke: rgb(233, 230, 230) 3px;
-        margin-right: $space-big;
-      }
     }
   }
 }
 
 #home {
   .input-container {
-    width: 90%;
-    max-width: 500px;
-    height: 200px;
-    border-radius: 30px;
-    padding: $space-medium;
-    background-color: $color-red;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    .example {
-      display: inline-block;
-      color: white;
-      font-size: 12px;
-      border-top: 10px transparent solid;
-    }
-
     @media (min-width: 1000px) {
       height: 250px;
       width: 75%;
-    }
-
-    label {
-      font-size: $paragraph-mobile-big;
-      margin-bottom: 12px;
-    }
-
-    input {
-      height: 50px;
-      width: 85%;
-      border-radius: 10px 30px 30px 10px;
-      border: rgba(98, 97, 97, 0.131) solid 2px;
-      padding: $space-small;
-    }
-
-    button:hover {
-      cursor: pointer;
-    }
-
-    .icon {
-      font-size: 25px;
-      color: rgba(43, 43, 43, 0.405);
-      position: relative;
-      left: -40px;
-      top: 5px;
-    }
-
-    .alert {
-      width: 85%;
-      font-size: $paragraph-mobile;
-      padding: $space-small $space-small;
-      text-align: center;
-      border-radius: 30px;
-      background-color: $color-wheat;
-      color: $color-red;
     }
   }
 }

@@ -16,6 +16,7 @@ export default function Home() {
 
   const [errors, setErrors] = useState({});
   const [isValid, setisValid] = useState(true);
+  const [focus, setFocus] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -29,6 +30,14 @@ export default function Home() {
     }
   }
 
+  function handleFocus() {
+    setFocus(true);
+  }
+
+  // function handleBlur() {
+  //   setFocus(false);
+  // }
+
   return (
     <div id="home">
       <section className="hero">{/*Empty on purpose*/}</section>
@@ -36,20 +45,26 @@ export default function Home() {
         <form className="input-container">
           <label htmlFor="phoneNumber">{labelMobileNumber}</label>
           <div>
-            <input
-              type={"text"}
-              placeholder={`${placeHolder}`}
-              onChange={(e) => setPhoneNumber(e.target.value.trim())}
-            />
-            <button type="submit" onClick={(e) => handleSubmit(e)}>
-              <FontAwesomeIcon
-                className="icon"
-                icon={solid("magnifying-glass")}
+            <div className="input">
+              <input
+                type={"text"}
+                placeholder={`${placeHolder}`}
+                onFocus={handleFocus}
+                onChange={(e) => setPhoneNumber(e.target.value.trim())}
               />
-            </button>
-            <span className="example">
-              {example}: +46 729478015 - {condition}
-            </span>
+              <button type="submit" onClick={(e) => handleSubmit(e)}>
+                <FontAwesomeIcon
+                  className="icon"
+                  icon={solid("magnifying-glass")}
+                />
+              </button>
+            </div>
+
+            {focus && (
+              <span className="example">
+                {example}: +46 729478015 - {condition}
+              </span>
+            )}
             {!isValid && setMessages(errors)}
           </div>
         </form>

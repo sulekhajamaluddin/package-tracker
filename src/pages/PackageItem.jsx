@@ -1,5 +1,5 @@
 // Node modules
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 //Project Files
 import truck from "../assets/images/truck.png";
@@ -8,6 +8,7 @@ import LocationMap from "../components/LocationMap";
 import { getInfoObj, getState, getMessage } from "./utils";
 
 export default function PackageItem() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const { content } = useContent();
   const { packages } = usePackages();
@@ -43,6 +44,7 @@ export default function PackageItem() {
           longitude={selectedPackage.location_coordinate_longitude}
         />
       </section>
+      <button onClick={() => navigate(-1)}>Go Back</button>
     </div>
   );
 }
