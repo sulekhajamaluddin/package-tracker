@@ -48,33 +48,10 @@ export function getMessage(currentState, selectedPackage, content) {
   const formattedDate = getDate(selectedPackage);
   const formattedTime = getTime(selectedPackage, content);
   if (currentState === "coming") {
-    return `${content.messageComing} ${formattedDate} ${formattedTime} ${content.hours}`;
+    return `${content.package_coming_message} ${formattedDate} ${formattedTime} ${content.hours}`;
   } else if (currentState === "ready") {
-    return `${content.messagePickUp}`;
+    return `${content.package_ready_message}`;
   } else if (currentState === "delivered") {
-    return `${content.messageDelivered} ${formattedDate}`;
+    return `${content.package_delivered_message} ${formattedDate}`;
   }
-}
-
-export function getErrors(phoneNumber) {
-  const result = {};
-  const phonePattern = /\+\d{2}[ ]?\d{9}\b/;
-  if (!phoneNumber) result.phoneNumber = "*Mobile Number is required";
-  if (!phoneNumber.trim())
-    result.emptyPhoneNumber = "*Mobile number cannot be empty string";
-  if (phoneNumber && !phonePattern.test(phoneNumber))
-    result.name = "Please enter a valid mobile number";
-  return result;
-}
-
-export function setMessages(errors) {
-  return (
-    <div className="alert">
-      <ul>
-        {Object.keys(errors).map((key) => {
-          return <li key={key}>{errors[key]}</li>;
-        })}
-      </ul>
-    </div>
-  );
 }

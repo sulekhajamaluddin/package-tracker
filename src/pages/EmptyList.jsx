@@ -1,18 +1,15 @@
 //Project Files
 import emptyBox from "../assets/images/empty-box.png";
-import { useContent } from "../state/ContentContext";
+import { useTranslation } from "../state/TranslationContext";
 
 export default function EmptyList() {
-  const { content } = useContent();
-  const { emptyOne, emptyTwo } = content;
+  const { content } = useTranslation();
+  const { empty } = content;
 
   return (
     <div className="empty-list">
       <img src={emptyBox} alt="A few packages and one empty" />
-      <p>
-        {emptyOne} <br />
-        {emptyTwo}
-      </p>
+      <p>{empty}</p>
     </div>
   );
 }

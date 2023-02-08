@@ -1,4 +1,4 @@
 import { usePackages } from "./PackagesContext";
-import { useContent } from "./ContentContext";
+import { useTranslation } from "./TranslationContext";
 
-export { usePackages, useContent };
+export { usePackages, useTranslation };

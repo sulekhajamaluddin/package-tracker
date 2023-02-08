@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 //Project Files
 import Swedish from "../data/swedish.json";
 import English from "../data/english.json";
-import { useContent } from "../state/ContentContext";
+import { useTranslation } from "../state/TranslationContext";
 
 export default function LanguageSelection() {
-  const { setContent } = useContent();
+  const { setContent } = useTranslation();
   const [languageCurrent, setLanguageCurrent] = useState("EN");
 
   function setContentLanguage() {

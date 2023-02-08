@@ -3,18 +3,22 @@ import { useParams, useNavigate } from "react-router-dom";
 
 //Project Files
 import truck from "../assets/images/truck.png";
-import { useContent, usePackages } from "../state";
+import { useTranslation } from "../state";
 import LocationMap from "../components/LocationMap";
 import { getInfoObj, getState, getMessage } from "./utils";
+import { EmptyList } from "../pages";
 
 export default function PackageItem() {
   const navigate = useNavigate();
   const { id } = useParams();
-  const { content } = useContent();
-  const { packages } = usePackages();
-  const { packageID } = content;
+  const { content } = useTranslation();
+  const { package_id } = content;
+  const packages = JSON.parse(localStorage.getItem("packages"));
 
   const selectedPackage = packages.filter((item) => item.parcel_id === id)[0];
+
+  if (!selectedPackage) return <EmptyList />;
+
   const { parcel_id, status } = selectedPackage;
   const currentState = getState(selectedPackage);
   const message = getMessage(currentState, selectedPackage, content);
@@ -31,7 +35,7 @@ export default function PackageItem() {
       <img src={truck} alt="A blue truck" />
       <section className="header">
         <p className="package-id">
-          {packageID} : {parcel_id}
+          {package_id} : {parcel_id}
         </p>
         <h1>{status}</h1>
       </section>
@@ -44,7 +48,9 @@ export default function PackageItem() {
           longitude={selectedPackage.location_coordinate_longitude}
         />
       </section>
-      <button onClick={() => navigate(-1)}>Go Back</button>
+      <button className="back" onClick={() => navigate("/packages")}>
+        Go Back
+      </button>
     </div>
   );
 }

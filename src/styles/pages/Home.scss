@@ -26,6 +26,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: $space-medium;
     background: repeating-linear-gradient(
       to right,
       $color-red,
@@ -34,53 +35,17 @@
       $color-blue-white 70px
     );
 
-    h1,
-    span {
+    .insta,
+    .tracker {
       display: none;
     }
   }
 }
 
 #home {
-  .input-container {
-    width: 90%;
-    max-width: 500px;
-    height: 200px;
-    border-radius: 30px;
-    padding: $space-medium;
-    background-color: $color-red;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    .example {
-      display: inline-block;
-      max-width: 95%;
-      color: white;
-      font-size: 12px;
-      border-top: 10px transparent solid;
-    }
-
-    label {
-      font-size: 18px;
-      max-width: 95%;
-      margin-bottom: 12px;
-    }
-
-    .input {
-      width: 95%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-    }
-
-    input {
-      height: 50px;
-      width: 100%;
-      border-radius: 10px 30px 30px 10px;
-      border: rgba(98, 97, 97, 0.131) solid 2px;
+  .container {
+    .welcome-message {
+      color: $color-grey;
       padding: $space-small;
     }
 
@@ -88,26 +53,16 @@
       cursor: pointer;
     }
 
-    .icon {
-      font-size: 25px;
-      color: rgba(43, 43, 43, 0.405);
-      position: absolute;
-      top: 11px;
-      right: 10px;
-    }
-
-    .alert {
-      font-size: $paragraph-mobile;
-      padding: $space-small $space-small;
-      text-align: center;
+    .view-button {
+      height: 80px;
+      width: 70%;
       border-radius: 5px;
-      background-color: $color-wheat;
-      margin-top: $space-medium;
-      color: $color-red;
-
-      li {
-        list-style: none;
-      }
+      background-color: $color-red;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 $space-medium;
     }
   }
 }
@@ -175,7 +130,7 @@
         margin-right: $space-big;
       }
 
-      h1 {
+      .insta {
         position: absolute;
         display: block;
         color: $color-red;
@@ -194,15 +149,6 @@
           width: 105px;
         }
       }
-    }
-  }
-}
-
-#home {
-  .input-container {
-    @media (min-width: 1000px) {
-      height: 250px;
-      width: 75%;
     }
   }
 }

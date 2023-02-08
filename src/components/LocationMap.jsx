@@ -1,4 +1,6 @@
+//Node Modules
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
+
 export default function LocationMap({ latitude, longitude }) {
   const mapOptions = {
     googleMapApiKey: process.env.REACT_APP_API_KEY,
