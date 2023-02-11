@@ -11,7 +11,7 @@ export function getTime(selectedPackage, content) {
   const estimatedTime = selectedPackage.eta.slice(11, 13);
   const estimatedTimeInHours = +estimatedTime;
   const timeString = `${content.between} ${estimatedTimeInHours}:00 and ${
-    estimatedTimeInHours + 1
+    estimatedTimeInHours + 3
   }:00`;
   return timeString;
 }
