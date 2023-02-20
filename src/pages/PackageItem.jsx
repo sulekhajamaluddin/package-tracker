@@ -11,7 +11,7 @@ import { EmptyList } from "../pages";
 export default function PackageItem() {
   const navigate = useNavigate();
   const { packageId } = useParams();
-  const { content, package_id } = useTranslation();
+  const { content } = useTranslation();
   const { packages } = usePackages();
 
   const selectedPackage = packages.filter(
@@ -40,7 +40,7 @@ export default function PackageItem() {
       <div className={currentState}></div>
       <section className="header">
         <p className="package-id">
-          {package_id} : {id}
+          {content.package_id} : {id}
         </p>
         <h1>{status}</h1>
       </section>
