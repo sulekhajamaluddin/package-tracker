@@ -6,7 +6,6 @@ export async function getPackages() {
       throw response;
     }
     const data = await response.json();
-    localStorage.setItem("packages", JSON.stringify(data));
     return data;
   } catch (error) {
     throw error;

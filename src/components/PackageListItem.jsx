@@ -9,7 +9,7 @@ import { usePackages } from "../state";
 export default function PackageListItem({ packageId }) {
   const { packages } = usePackages();
 
-  const selectedPackage = packages.find((item) => item.parcel_id === packageId);
+  const selectedPackage = packages.find((item) => item.id === packageId);
 
   return (
     <div className="package-list-item">

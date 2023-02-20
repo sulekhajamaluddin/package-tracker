@@ -9,13 +9,11 @@ export default function PackageListPage() {
   const { content } = useTranslation();
   const { packages } = usePackages();
 
-  const packageItem = packages?.map((item) => (
-    <PackageListItem
-      key={item.id}
-      packageId={item.parcel_id}
-      packages={packages}
-    />
-  ));
+  const packageItem = packages?.map((item) => {
+    return (
+      <PackageListItem key={item.id} packageId={item.id} packages={packages} />
+    );
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);

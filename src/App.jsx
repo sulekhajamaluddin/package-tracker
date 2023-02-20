@@ -31,7 +31,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/packages/" element={<PackageListPage />} />
-        <Route path="/packages/:id" element={<PackageItem />} />
+        <Route path="/packages/:packageId" element={<PackageItem />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />

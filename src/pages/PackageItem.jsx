@@ -3,19 +3,20 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 //Project Files
-import { useTranslation } from "../state";
+import { usePackages, useTranslation } from "../state";
 import LocationMap from "../components/LocationMap";
 import { getInfoObj, getState, getMessage } from "./utils";
 import { EmptyList } from "../pages";
 
 export default function PackageItem() {
   const navigate = useNavigate();
-  const { id } = useParams();
-  const { content } = useTranslation();
-  const { package_id } = content;
-  const packages = JSON.parse(localStorage.getItem("packages"));
+  const { packageId } = useParams();
+  const { content, package_id } = useTranslation();
+  const { packages } = usePackages();
 
-  const selectedPackage = packages.filter((item) => item.parcel_id === id)[0];
+  const selectedPackage = packages.filter(
+    (item) => item.id === Number(packageId)
+  )[0];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -23,7 +24,7 @@ export default function PackageItem() {
 
   if (!selectedPackage) return <EmptyList />;
 
-  const { parcel_id, status } = selectedPackage;
+  const { id, status } = selectedPackage;
   const currentState = getState(selectedPackage);
   const message = getMessage(currentState, selectedPackage, content);
   const infoObject = getInfoObj(selectedPackage, content);
@@ -39,7 +40,7 @@ export default function PackageItem() {
       <div className={currentState}></div>
       <section className="header">
         <p className="package-id">
-          {package_id} : {parcel_id}
+          {package_id} : {id}
         </p>
         <h1>{status}</h1>
       </section>
