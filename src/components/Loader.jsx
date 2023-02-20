@@ -8,6 +8,7 @@ export default function Loader() {
   const { content } = useTranslation();
   return (
     <div className="loader">
+      <span>{content.hello}</span>
       <ClockLoader
         color={"#f37a24"}
         loading={true}

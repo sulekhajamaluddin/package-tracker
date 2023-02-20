@@ -1,8 +1,8 @@
 // Node modules
 import { useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 //Project Files
-import truck from "../assets/images/truck.png";
 import { useTranslation } from "../state";
 import LocationMap from "../components/LocationMap";
 import { getInfoObj, getState, getMessage } from "./utils";
@@ -16,6 +16,10 @@ export default function PackageItem() {
   const packages = JSON.parse(localStorage.getItem("packages"));
 
   const selectedPackage = packages.filter((item) => item.parcel_id === id)[0];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!selectedPackage) return <EmptyList />;
 
@@ -32,7 +36,7 @@ export default function PackageItem() {
 
   return (
     <div className="package-item">
-      <img src={truck} alt="A blue truck" />
+      <div className={currentState}></div>
       <section className="header">
         <p className="package-id">
           {package_id} : {parcel_id}

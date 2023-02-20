@@ -17,8 +17,31 @@
 }
 
 .package-item {
-  img {
-    height: 300px;
+  .coming {
+    height: 200px;
+    width: 300px;
+    margin-top: $space-big;
+    background: url("../../../public/assets/truck.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .delivered {
+    height: 200px;
+    width: 300px;
+    margin-top: $space-big;
+    background: url("../../../public/assets/delivered.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .ready {
+    height: 200px;
+    width: 300px;
+    margin-top: $space-big;
+    background: url("../../../public/assets/ready.png");
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .package-id {
