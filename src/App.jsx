@@ -4,11 +4,15 @@ import { useState, useEffect } from "react";
 
 //Project Files
 import "./styles/styles.scss";
-import { NavBar, Footer } from "./components";
-import { Home, PackageListPage, PackageItem, PageNotFound } from "./pages";
+import { NavBar, Footer, Loader } from "./components";
+import {
+  Home,
+  PackageListPage,
+  PackageItem,
+  PageNotFound,
+  Error,
+} from "./pages";
 import { usePackages } from "./state";
-import { Loader } from "./components";
-import { Error } from "./pages";
 
 import { loadPackages } from "./services/packageService";
 

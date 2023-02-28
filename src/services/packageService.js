@@ -2,7 +2,8 @@ export async function getPackages() {
   try {
     const url = "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840";
     const response = await fetch(url);
-    if (!response.ok) {
+    const success = response.ok;
+    if (!success) {
       throw response;
     }
     const data = await response.json();
